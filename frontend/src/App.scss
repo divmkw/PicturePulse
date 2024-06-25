@@ -1,0 +1,88 @@
+/* -------------------------------------------------------------------------- */
+/*                               [ Global CSS ]                               */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Disable Text Selection */
+  // -webkit-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+}
+
+html {
+  font-family: poppins;
+  background: #000000;
+  background: -webkit-linear-gradient(0deg, #000000 0%, #04c4d9 100%);
+  background: linear-gradient(0deg, #000000 0%, #04c4d9 100%);
+}
+
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* > img {
+  user-select: none;
+  pointer-events: none;
+  display: inline-block;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Scroll Bar Styling                             */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                              Structure Sizing                              */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                               Media queries                                */
+/* -------------------------------------------------------------------------- */
+
+.section_padding {
+  padding: 0 8rem;
+}
+
+@media only screen and (max-width: 1920px) {
+  .section_padding {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .section_padding {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section_padding {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .section_padding {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .section_padding {
+    padding: 0 2rem;
+  }
+}

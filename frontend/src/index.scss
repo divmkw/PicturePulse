@@ -1,0 +1,102 @@
+/* -------------------------------------------------------------------------- */
+/*                              [ Font Families ]                             */
+/* -------------------------------------------------------------------------- */
+
+// Embed font code
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ----------- OR ----------- */
+
+// // Embed font files
+// @font-face {
+//     font-family: anton;
+//     src: url(./assets/fonts/Anton/Anton-Regular.ttf);
+// }
+// @font-face {
+//     font-family: poppins-el;
+//     src: url(./assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+// }
+// @font-face {
+//     font-family: poppins-r;
+//     src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+// }
+// @font-face {
+//     font-family: poppins-sb;
+//     src: url(./assets/fonts/Poppins/Poppins-SemiBold.ttf);
+// }
+// @font-face {
+//     font-family: poppins-b;
+//     src: url(./assets/fonts/Poppins/Poppins-Bold.ttf);
+// }
+
+/* -------------------------------------------------------------------------- */
+/*                                  [ :root ]                                 */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --primary-color: #000009;
+  --secondary-color: #ffffff;
+  --tertiary-color: #04c4d9;
+  --quaternary-color: #6679a9;
+  --black-color1: rgb(0, 0, 9, 0.6);
+
+  --color-white: #ffffff;
+  --color-light: #f1f5f9;
+  --color-black: #121212;
+  --color-night: #001632;
+
+  --color-red: #f44336;
+  --color-blue: #1a73e8;
+  --color-gray: #80868b;
+  --color-grayish: #dadce0;
+
+  --shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               [ Animations ]                               */
+/* -------------------------------------------------------------------------- */
+
+/*
+* ----------------------------------------
+* animation scale-up-tr
+* ----------------------------------------
+*/
+.scale-up-tr {
+  -webkit-animation: scale-up-tr 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-tr 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-tr {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+@keyframes scale-up-tr {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
