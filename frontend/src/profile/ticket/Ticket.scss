@@ -1,0 +1,145 @@
+.ticket_cont {
+  // Variables
+  $background-color: rgb(48, 48, 48);
+  $width: 400;
+  $circle-size: 50;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+
+  body {
+    background-color: $background-color;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 600;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+
+  .ticket {
+    width: $width + px;
+    // height: 775px;
+    background-color: white;
+    margin: 25px auto;
+    position: relative;
+  }
+
+  .holes-top {
+    height: $circle-size + px;
+    width: $circle-size + px;
+    background-color: $background-color;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: ($circle-size / -2) + px;
+    top: ($circle-size / -2) + px;
+
+    &:before,
+    &:after {
+      content: "";
+      height: $circle-size + px;
+      width: $circle-size + px;
+      background-color: $background-color;
+      position: absolute;
+      border-radius: 50%;
+    }
+    &:before {
+      left: ($width / -2) + px;
+    }
+    &:after {
+      left: ($width / 2) + px;
+    }
+  }
+
+  .holes-lower {
+    position: relative;
+    margin: 25px;
+    border: 1px dashed #aaa;
+    &:before,
+    &:after {
+      content: "";
+      height: $circle-size + px;
+      width: $circle-size + px;
+      background-color: $background-color;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    &:before {
+      top: -25px;
+      left: ($circle-size / -1) + px;
+    }
+    &:after {
+      top: -25px;
+      left: ($width - $circle-size) + px;
+    }
+  }
+
+  .title {
+    padding: 50px 25px 10px;
+  }
+
+  .cinema {
+    color: #aaa;
+    font-size: 22px;
+  }
+
+  .movie-title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .info {
+    padding: 10px 30px;
+  }
+  table {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    tr {
+      margin-bottom: 10px;
+    }
+
+    th {
+      &:nth-of-type(1) {
+        width: 50%;
+      }
+      &:nth-of-type(2) {
+        width: 50%;
+      }
+      // &:nth-of-type(3) {
+      //   width: 33.33%;
+      // }
+    }
+
+    td {
+      width: 33%;
+      font-size: 32px;
+    }
+  }
+  .bigger {
+    font-size: 48px;
+  }
+
+  .bottom {
+    position: relative;
+    // height: 100%;
+    // top: -25px;
+    // z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 25px 0;
+
+    .nav_logo {
+      display: flex;
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
