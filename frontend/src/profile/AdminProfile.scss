@@ -1,0 +1,76 @@
+.admin_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 140px;
+
+  .admin_details {
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+      text-decoration: underline;
+      font-size: 26px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .admin_movie_list {
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+      text-decoration: underline;
+      font-size: 32px;
+      color: white;
+    }
+
+    .movies_lists {
+      .movie-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .movie-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        padding: 20px;
+      }
+
+      .movie-photo {
+        width: 180px;
+        // height: 25px;
+        margin-right: 20px;
+      }
+
+      .movie-title {
+        font-size: 20px;
+        font-weight: bold;
+        flex: 1; /* Expand to take available space */
+        text-align: center; /* Center align the text */
+      }
+
+      .movie-release-date {
+        font-size: 20px;
+        text-align: right; /* Align text to the right */
+      }
+    }
+  }
+}
