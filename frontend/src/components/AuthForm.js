@@ -1,0 +1,129 @@
+/* --------------------------------- Imports -------------------------------- */
+
+// [Import react components]
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+// [Import packages]
+// * Material UI
+import {
+  Box,
+  Button,
+  Dialog,
+  IconButton,
+  TextField,
+  Typography,
+} from "@mui/material";
+// * font-awesome icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
+
+// // [Import local folders/files]
+// // * stylesheets
+import "./AuthForm.scss";
+
+/* ------------------------------ Main function ----------------------------- */
+
+// form handling 
+const AuthForm = ({ onSubmit, isAdmin }) => {
+
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const [isSignup, setIsSignup] = useState(false);
+  const handleChange = (e) => {
+    setInputs((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({ inputs, signup: isAdmin ? false : isSignup });
+  };
+
+  return (
+    <Dialog className="auth_form" PaperProps={{ style: { borderRadius: 20 } }} open={true}>
+
+      <Typography className="head">
+        <Box className="top">
+          <IconButton LinkComponent={Link} to="/">
+            <FontAwesomeIcon className="crossicon" icon={faXmark} />
+          </IconButton>
+        </Box>
+        {isSignup ? "Signup" : "Login"}
+      </Typography>
+
+      <form onSubmit={handleSubmit}>
+        <Box
+          padding={6}
+          display={"flex"}
+          justifyContent={"center"}
+          flexDirection="column"
+          width={400}
+          margin="auto"
+          alignContent={"center"}
+        >
+          {!isAdmin && isSignup && (
+            <>
+              {" "}
+              <TextField
+                value={inputs.name}
+                onChange={handleChange}
+                margin="normal"
+                variant="standard"
+                type={"text"}
+                name="name"
+                placeholder="Username"
+                InputProps={{ disableUnderline: true }}
+                autoComplete="true"
+              />
+            </>
+          )}
+          <TextField
+            value={inputs.email}
+            onChange={handleChange}
+            margin="normal"
+            variant="standard"
+            type={"email"}
+            name="email"
+            placeholder="Email"
+            InputProps={{ disableUnderline: true }}
+            autoComplete="true"
+          />
+          <TextField
+            value={inputs.password}
+            onChange={handleChange}
+            margin="normal"
+            variant="standard"
+            type={"password"}
+            name="password"
+            placeholder="Password"
+            InputProps={{ disableUnderline: true }}
+            autoComplete="true"
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+          >
+            {isSignup ? "Signup" : "Login"}
+          </Button>
+          {!isAdmin && (
+            <Button
+              onClick={() => setIsSignup(!isSignup)}
+              fullWidth
+            >
+              Switch To {isSignup ? "Login" : "Signup"}
+            </Button>
+          )}
+        </Box>
+      </form>
+    </Dialog>
+  );
+};
+
+export default AuthForm;
